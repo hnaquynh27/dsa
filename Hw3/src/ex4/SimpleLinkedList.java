@@ -134,9 +134,11 @@ public class SimpleLinkedList<T> {
         while (curr.next.next != null) {
             curr = curr.next;
         }
-        curr.next = null;
-
-        return top.data;
+        bot = curr;
+        curr = curr.next;
+        bot.next = null;
+        n--;
+        return curr.data;
 
     }
 
